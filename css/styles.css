@@ -175,7 +175,7 @@ body {
   background-size: cover;
   margin: 0 auto 0 auto;
 }
-.hero-title {
+.hero__title {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.364;
@@ -184,7 +184,7 @@ body {
   margin: 0 auto var(--main-margin) auto;
   max-width: 696px;
 }
-.modal-btn {
+.hero__button {
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -199,8 +199,8 @@ body {
   transition: background-color var(--animation-duration)
     var(--animation-timing-function);
 }
-.modal-btn:hover,
-.modal-btn:focus {
+.hero__button:hover,
+.hero__button:focus {
   color: var(--third-text-color);
   background-color: var(--modal-btn-hover-focus-background-color);
 }
@@ -777,7 +777,11 @@ body {
 }
 
 /* ==FOOTER== */
-
+.footer {
+  background-color: var(--second-background-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
 .logo {
   font-family: var(--second-font);
   font-weight: 700;
@@ -786,38 +790,38 @@ body {
   letter-spacing: 0.03em;
   color: var(--accent-color);
 }
-.address {
+.address__list {
   margin-top: 20px;
 }
-.address-item:not(:last-child) {
+.address__item:not(:last-child) {
   margin-bottom: 9px;
 }
-.address-link {
+.address__link {
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
   color: var(--third-text-color);
   transition: color var(--animation-duration) var(--animation-timing-function);
 }
-.address-mail-link,
-.address-phone-link {
+.address__mail,
+.address__phone {
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
   color: var(--address-phone-mail-color);
   transition: color var(--animation-duration) var(--animation-timing-function);
 }
-.address-link:hover,
-.address-link:focus {
+.address__link:hover,
+.address__link:focus {
   color: var(--accent-color);
 }
 
-.address-mail-link:hover,
-.address-mail-link:focus {
+.address__mail:hover,
+.address__mail:focus {
   color: var(--accent-color);
 }
-.address-phone-link:hover,
-.address-phone-link:focus {
+.address__phone:hover,
+.address__phone:focus {
   color: var(--accent-color);
 }
 .header__logo {
@@ -826,16 +830,16 @@ body {
 .footer__logo {
   color: var(--third-text-color);
 }
-.footer-list {
+.footer__content {
   display: flex;
   align-items: baseline;
 }
 
-.footer-social-list {
+.join {
   margin: 0 93px 0 70px;
 }
 
-.footer-social-title {
+.join__title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.17;
@@ -846,16 +850,16 @@ body {
   margin-bottom: 20px;
 }
 
-.footer-contact-list {
+.join__list {
   display: flex;
   align-items: baseline;
 }
 
-.footer-contact-list-item:not(:last-child) {
+.join__item:not(:last-child) {
   margin-right: 10px;
 }
 
-.footer-contact-list-item-link {
+.join__link {
   align-items: center;
   justify-content: center;
   display: flex;
@@ -868,11 +872,11 @@ body {
     var(--animation-timing-function);
 }
 
-.footer-contact-list-item-link:focus,
-.footer-contact-list-item-link:hover {
+.join__link:focus,
+.join__link:hover {
   background-color: var(--accent-color);
 }
-.footer-form-title {
+.subscribe__title {
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -883,13 +887,13 @@ body {
   color: var(--third-text-color);
 }
 
-.footer-form-submit {
+.subscribe__form {
   margin-top: 20px;
   display: flex;
   align-items: center;
 }
 
-.footer-form-input {
+.subscribe__input {
   font-family: Roboto;
   font-size: 16px;
   line-height: 1.25;
@@ -911,12 +915,12 @@ body {
   transition: border var(--animation-duration) var(--animation-timing-function);
 }
 
-.footer-form-input:focus,
-.footer-form-input:hover {
+.subscribe__input:focus,
+.subscribe__input:hover {
   border: 1px solid rgba(33, 150, 243, 0.3);
 }
 
-.footer-form-button {
+.subscribe__button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -936,19 +940,14 @@ body {
     var(--animation-timing-function);
 }
 
-.footer-send-icon {
+.subscribe__icon {
   fill: currentColor;
   /* background-size: contain; */
   margin: 13px 0 13px 10px;
 }
 
-.footer-form-button:focus,
-.footer-form-button:hover {
+.subscribe__button:focus,
+.subscribe__button:hover {
   background-color: var(--modal-btn-hover-focus-background-color);
   cursor: pointer;
-}
-footer {
-  background-color: var(--second-background-color);
-  padding-top: 60px;
-  padding-bottom: 60px;
 }
