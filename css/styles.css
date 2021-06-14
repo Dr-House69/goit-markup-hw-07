@@ -78,43 +78,27 @@ body {
 .header {
   border-bottom: 1px solid var(--border-color);
 }
-.header-container {
+.header__content {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.navigation {
+.site-nav {
   display: flex;
   align-items: center;
 }
-.menu-list {
+.site-nav__menu {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-.contact {
-  display: flex;
-  padding: 0;
-}
-.mail-icon {
-  fill: currentColor;
-  margin-right: 10px;
-}
-.phone-icon {
-  fill: currentColor;
-  margin-right: 10px;
-}
-.menu-list {
   margin-left: 93px;
 }
-.menu-item:not(:last-child) {
+
+.site-nav__item:not(:last-child) {
   margin-right: 50px;
 }
-.contact-item:not(:last-child) {
-  margin-right: 30px;
-}
 
-.menu-link {
+.site-nav__link {
   position: relative;
   display: block;
   font-weight: 500;
@@ -136,16 +120,27 @@ body {
   background-color: var(--accent-color);
   border-radius: 2px;
 }
-.menu-link:hover,
-.menu-link:focus {
+.site-nav__link:hover,
+.site-nav__link:focus {
   color: var(--accent-color);
 }
-.menu-list .link.current {
+.site-nav__menu .link.current {
   color: var(--accent-color);
 }
-.mail-link,
-.phone-link {
-  display: block;
+.contact {
+  display: flex;
+  padding: 0;
+}
+.contact__item:not(:last-child) {
+  margin-right: 30px;
+}
+.contact__icon {
+  fill: currentColor;
+  margin-right: 10px;
+}
+.contact__link {
+  display: inline-flex;
+  align-items: center;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -154,19 +149,12 @@ body {
   padding: 32px 0;
   transition: color var(--animation-duration) var(--animation-timing-function);
 }
-.contact-link {
-  display: inline-flex;
-  color: var(--second-text-color);
-  align-items: center;
-}
-.mail-link:hover,
-.mail-link:focus {
+
+.contact__link:hover,
+.contact__link:focus {
   color: var(--accent-color);
 }
-.phone-link:hover,
-.phone-link:focus {
-  color: var(--accent-color);
-}
+
 /* ==HERO== */
 
 .hero {
@@ -832,10 +820,10 @@ body {
 .address-phone-link:focus {
   color: var(--accent-color);
 }
-.accent-black {
+.header__logo {
   color: var(--main-text-color);
 }
-.accent-white {
+.footer__logo {
   color: var(--third-text-color);
 }
 .footer-list {
