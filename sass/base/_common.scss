@@ -24,7 +24,7 @@ img {
   text-decoration: none;
 }
 body {
-  font-family: var(--main-font);
+  font-family: $mainFont;
   background-color: var(--body-background-color);
   letter-spacing: 0.03em;
   color: var(--third-text-color);

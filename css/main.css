@@ -1,6 +1,4 @@
 :root {
-  --main-font: "Roboto", sans-serif;
-  --second-font: "Raleway", sans-serif;
   --main-text-color: #212121;
   --second-text-color: #757575;
   --third-text-color: #ffffff;
@@ -61,7 +59,7 @@ img {
 }
 
 body {
-  font-family: var(--main-font);
+  font-family: "Roboto", sans-serif;
   background-color: var(--body-background-color);
   letter-spacing: 0.03em;
   color: var(--third-text-color);
@@ -774,7 +772,7 @@ body {
 }
 
 .logo {
-  font-family: var(--second-font);
+  font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
@@ -892,7 +890,6 @@ body {
 }
 
 .subscribe__input {
-  font-family: Roboto;
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
@@ -933,7 +930,6 @@ body {
 
 .subscribe__icon {
   fill: currentColor;
-  /* background-size: contain; */
   margin: 13px 0 13px 10px;
 }
 
