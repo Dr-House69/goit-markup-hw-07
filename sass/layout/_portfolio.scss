@@ -21,19 +21,19 @@
   font-size: 16px;
   line-height: 1.63;
   letter-spacing: 0.03em;
-  color: var(--main-text-color);
-  background-color: var(--third-background-color);
+  color: $mainTextColor;
+  background-color: $thirdBackgroundColor;
   cursor: pointer;
   border: none;
   border-radius: 4px;
-  transition: color var(--animation-duration) var(--animation-timing-function),
-    background-color var(--animation-duration) var(--animation-timing-function),
-    box-shadow var(--animation-duration) var(--animation-timing-function);
+  transition: color $animationDuration $animationTimingFunction,
+    background-color $animationDuration $animationTimingFunction,
+    box-shadow $animationDuration $animationTimingFunction;
 }
 .filter__btn:hover,
 .filter__btn:focus {
-  color: var(--third-text-color);
-  background-color: var(--accent-color);
+  color: $thirdTextColor;
+  background-color: $accentColor;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
@@ -49,28 +49,27 @@
   flex-basis: calc(100% / 9 - var(--main-margin));
   margin-right: var(--main-margin);
   margin-bottom: var(--main-margin);
-  background-color: var(--body-background-color);
-  transition: box-shadow var(--animation-duration)
-    var(--animation-timing-function);
+  background-color: $bodyBackgroundColor;
+  transition: box-shadow $animationDuration $animationTimingFunction;
 }
 .projects__description {
   padding: 20px 24px;
-  border-left: 1px solid var(--border-color);
-  border-bottom: 1px solid var(--border-color);
-  border-right: 1px solid var(--border-color);
+  border-left: 1px solid $borderColor;
+  border-bottom: 1px solid $borderColor;
+  border-right: 1px solid $borderColor;
 }
 .projects__title {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  color: var(--main-text-color);
+  color: $mainTextColor;
   margin: 0 0 4px 0;
 }
 .projects__specimen {
   font-size: 16px;
   line-height: 1.88;
-  color: var(--second-text-color);
+  color: $secondaryTextColor;
 }
 
 .projects__content-wrapper {
@@ -83,7 +82,7 @@
   left: 0;
   opacity: 0;
   background-color: rgba(33, 150, 243, 0.9);
-  color: var(--third-text-color);
+  color: $thirdTextColor;
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
@@ -92,9 +91,8 @@
   height: 294px;
   padding: 63px 24px;
   transform: translateY(100%);
-  transition: transform var(--animation-duration)
-      var(--animation-timing-function),
-    opacity var(--animation-duration) var(--animation-timing-function);
+  transition: transform $animationDuration $animationTimingFunction,
+    opacity $animationDuration $animationTimingFunction;
 }
 .projects__content:hover .overlay {
   transform: translateY(0%);

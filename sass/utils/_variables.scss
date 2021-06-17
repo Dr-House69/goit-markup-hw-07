@@ -1,18 +1,23 @@
 $mainFont: "Roboto", sans-serif;
 $secondaryFont: "Raleway", sans-serif;
+
+$mainTextColor: #212121;
+$secondaryTextColor: #757575;
+$thirdTextColor: #ffffff;
+$addressPhoneMailColor: #ffffff99;
+$socialLinkColor: #afb1b8;
+$bodyBackgroundColor: #ffffff;
+$secondaryBackgroundColor: #2f303a;
+$thirdBackgroundColor: #f5f4fa;
+$modalBtnBackgroundColor: #188ce8;
+$accentColor: #2196f3;
+$borderColor: #ececec;
+
+$mainMargin: 30px;
+
+$animationTimingFunction: cubic-bezier(0.4, 0, 0.2, 1);
+$animationDuration: 250ms;
+
 :root {
-  --main-text-color: #212121;
-  --second-text-color: #757575;
-  --third-text-color: #ffffff;
-  --address-phone-mail-color: #ffffff99;
-  --social-link-color: #afb1b8;
-  --body-background-color: #ffffff;
-  --second-background-color: #2f303a;
-  --third-background-color: #f5f4fa;
-  --modal-btn-hover-focus-background-color: #188ce8;
-  --accent-color: #2196f3;
-  --border-color: #ececec;
   --main-margin: 30px;
-  --animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  --animation-duration: 250ms;
 }
