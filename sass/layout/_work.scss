@@ -3,15 +3,16 @@
 }
 .work__list {
   display: flex;
-  /* justify-content: space-between; */
 }
 .work__item {
   position: relative;
-  width: calc((100% - 2 * var(--main-margin)) / 3);
+  width: calc((100% - 2 * #{$mainMargin}) / 3);
+
+  &:not(:last-child) {
+    margin-right: $mainMargin;
+  }
 }
-.work__item:not(:last-child) {
-  margin-right: var(--main-margin);
-}
+
 .work__title {
   position: absolute;
   left: 0;

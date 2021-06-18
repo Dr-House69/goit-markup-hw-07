@@ -42,13 +42,13 @@
 .projects {
   display: flex;
   flex-wrap: wrap;
-  margin-right: calc(-1 * var(--main-margin));
-  margin-bottom: calc(-1 * var(--main-margin));
+  margin-right: calc(-1 * #{$mainMargin});
+  margin-bottom: calc(-1 * #{$mainMargin});
 }
 .projects__item {
-  flex-basis: calc(100% / 9 - var(--main-margin));
-  margin-right: var(--main-margin);
-  margin-bottom: var(--main-margin);
+  flex-basis: calc(100% / 9 - #{$mainMargin});
+  margin-right: $mainMargin;
+  margin-bottom: $mainMargin;
   background-color: $bodyBackgroundColor;
   transition: box-shadow $animationDuration $animationTimingFunction;
 }

@@ -16,10 +16,10 @@
   margin-bottom: 30px;
 }
 .features__item {
-  width: calc((100% - 3 * var(--main-margin)) / 4);
+  width: calc((100% - 3 * #{$mainMargin}) / 4);
 }
 .features__item:not(:last-child) {
-  margin-right: var(--main-margin);
+  margin-right: $mainMargin;
 }
 .features__title {
   font-weight: 700;
