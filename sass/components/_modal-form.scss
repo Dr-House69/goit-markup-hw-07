@@ -1,3 +1,15 @@
+.modal-form {
+  background: $bodyBackgroundColor;
+  height: 581px;
+  padding: 40px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  &__conditions > a {
+    color: $accentColor;
+  }
+}
 .modal-form__title {
   font-weight: 700;
   font-size: 20px;
@@ -28,16 +40,12 @@
   margin-bottom: 4px;
 }
 
-.modal-form__item:focus-within > .modal-form__input {
-  border: 1px solid $accentColor;
-}
-
-.modal-form__item:focus-within > .modal-form__icon {
-  fill: $accentColor;
-}
-
 .modal-form__item {
   position: relative;
+
+  &:focus-within > .modal-form__input {
+    border: 1px solid $accentColor;
+  }
 }
 
 .modal-form__input {
@@ -60,12 +68,17 @@
   fill: $mainTextColor;
 
   transition: fill $animationDuration $animationTimingFunction;
-}
 
-/* ===FORM COMMENT === */
+  .modal-form__item:focus-within > & {
+    fill: $accentColor;
+  }
+}
 
 .modal-form__comment {
   margin-bottom: 20px;
+  &:focus-within > .modal-form__textarea {
+    border: 1px solid $accentColor;
+  }
 }
 
 .modal-form__textarea {
@@ -83,12 +96,6 @@
   transition: border $animationDuration $animationTimingFunction;
 }
 
-.modal-form__comment:focus-within > .modal-form__textarea {
-  border: 1px solid $accentColor;
-}
-
-/* === FORM CHECKBOX === */
-
 .modal-form__confirm {
   display: flex;
   align-items: center;
@@ -103,16 +110,6 @@
   transition: color $animationDuration $animationTimingFunction;
 }
 
-.modal-form__checkbox:checked + .modal-form__checkbox-icon {
-  background-image: url("../images/check.svg");
-  background-color: $accentColor;
-
-  background-size: contain;
-  background-origin: padding-box;
-  border-color: $accentColor;
-  transition: background-color $animationDuration $animationTimingFunction;
-}
-
 .modal-form__checkbox-icon {
   display: inline-block;
   width: 16px;
@@ -123,18 +120,24 @@
   margin-left: 14px;
   margin-right: 7px;
   transition: color $animationDuration $animationTimingFunction;
-}
-.modal-form__conditions > a {
-  color: $accentColor;
-}
-.modal-form__checkbox:focus + .modal-form__checkbox-icon,
-.modal-form__confirm:focus > .modal-form__checkbox-icon,
-.modal-form__confirm:hover > .modal-form__checkbox-icon {
-  cursor: pointer;
-  color: $accentColor;
-}
 
-/* === FORM BUTTON === */
+  .modal-form__checkbox:checked + & {
+    background-image: url("../images/check.svg");
+    background-color: $accentColor;
+
+    background-size: contain;
+    background-origin: padding-box;
+    border-color: $accentColor;
+    transition: background-color $animationDuration $animationTimingFunction;
+  }
+
+  .modal-form__checkbox:focus + &,
+  .modal-form__confirm:focus > &,
+  .modal-form__confirm:hover > & {
+    cursor: pointer;
+    color: $accentColor;
+  }
+}
 
 .modal-form__button {
   background-color: $accentColor;
@@ -149,10 +152,10 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   transition: background-color $animationDuration $animationTimingFunction;
-}
 
-.modal-form__button:focus,
-.modal-form__button:hover {
-  cursor: pointer;
-  background-color: $modalBtnBackgroundColor;
+  &:focus,
+  &:hover {
+    cursor: pointer;
+    background-color: $modalBtnBackgroundColor;
+  }
 }

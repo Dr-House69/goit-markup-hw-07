@@ -6,36 +6,37 @@
   margin-top: 0;
   margin-right: -8px;
   margin-bottom: 50px;
-}
 
-.filter__item {
-  margin-right: 8px;
-}
-.filter__btn {
-  display: block;
-  text-align: center;
-  flex-wrap: wrap;
-  padding: 6px 22px;
-  font-family: inherit;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.63;
-  letter-spacing: 0.03em;
-  color: $mainTextColor;
-  background-color: $thirdBackgroundColor;
-  cursor: pointer;
-  border: none;
-  border-radius: 4px;
-  transition: color $animationDuration $animationTimingFunction,
-    background-color $animationDuration $animationTimingFunction,
-    box-shadow $animationDuration $animationTimingFunction;
-}
-.filter__btn:hover,
-.filter__btn:focus {
-  color: $thirdTextColor;
-  background-color: $accentColor;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
+  &__item {
+    margin-right: 8px;
+  }
+  &__btn {
+    display: block;
+    text-align: center;
+    flex-wrap: wrap;
+    padding: 6px 22px;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.63;
+    letter-spacing: 0.03em;
+    color: $mainTextColor;
+    background-color: $thirdBackgroundColor;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    transition: color $animationDuration $animationTimingFunction,
+      background-color $animationDuration $animationTimingFunction,
+      box-shadow $animationDuration $animationTimingFunction;
+
+    &:hover,
+    &:focus {
+      color: $thirdTextColor;
+      background-color: $accentColor;
+      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+        0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+  }
 }
 
 /* ===CARD=== */
@@ -44,38 +45,56 @@
   flex-wrap: wrap;
   margin-right: calc(-1 * #{$mainMargin});
   margin-bottom: calc(-1 * #{$mainMargin});
-}
-.projects__item {
-  flex-basis: calc(100% / 9 - #{$mainMargin});
-  margin-right: $mainMargin;
-  margin-bottom: $mainMargin;
-  background-color: $bodyBackgroundColor;
-  transition: box-shadow $animationDuration $animationTimingFunction;
-}
-.projects__description {
-  padding: 20px 24px;
-  border-left: 1px solid $borderColor;
-  border-bottom: 1px solid $borderColor;
-  border-right: 1px solid $borderColor;
-}
-.projects__title {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-  color: $mainTextColor;
-  margin: 0 0 4px 0;
-}
-.projects__specimen {
-  font-size: 16px;
-  line-height: 1.88;
-  color: $secondaryTextColor;
+
+  &__item {
+    flex-basis: calc(100% / 9 - #{$mainMargin});
+    margin-right: $mainMargin;
+    margin-bottom: $mainMargin;
+    background-color: $bodyBackgroundColor;
+    transition: box-shadow $animationDuration $animationTimingFunction;
+
+    &:focus,
+    &:active,
+    &:hover {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1),
+        0px 4px 4px rgba(0, 0, 0, 0.08), 1px 4px 6px rgba(0, 0, 0, 0.12);
+      border-radius: 4px;
+    }
+  }
+  &__description {
+    padding: 20px 24px;
+    border-left: 1px solid $borderColor;
+    border-bottom: 1px solid $borderColor;
+    border-right: 1px solid $borderColor;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: $mainTextColor;
+    margin: 0 0 4px 0;
+  }
+  &__specimen {
+    font-size: 16px;
+    line-height: 1.88;
+    color: $secondaryTextColor;
+  }
+  &__content {
+    &:focus,
+    &:active,
+    &:hover {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1),
+        0px 4px 4px rgba(0, 0, 0, 0.08), 1px 4px 6px rgba(0, 0, 0, 0.12);
+      border-radius: 4px;
+    }
+  }
+  &__content-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
 }
 
-.projects__content-wrapper {
-  position: relative;
-  overflow: hidden;
-}
 .overlay {
   position: absolute;
   top: 0;
@@ -93,18 +112,9 @@
   transform: translateY(100%);
   transition: transform $animationDuration $animationTimingFunction,
     opacity $animationDuration $animationTimingFunction;
-}
-.projects__content:hover .overlay {
-  transform: translateY(0%);
-  opacity: 1;
-}
-.projects__content:focus,
-.projects__content:active,
-.projects__content:hover,
-.projects__item:focus,
-.projects__item:active,
-.projects__item:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 4px 4px rgba(0, 0, 0, 0.08),
-    1px 4px 6px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
+
+  .projects__content:hover & {
+    transform: translateY(0%);
+    opacity: 1;
+  }
 }

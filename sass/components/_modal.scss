@@ -31,22 +31,14 @@
   margin: 0;
   transform: scale(1);
   transition: transform $animationDuration $animationTimingFunction;
+
+  &:hover,
+  &:hover .close-icon {
+    color: $accentColor;
+  }
 }
 
 .close-icon {
   fill: currentColor;
   transition: color $animationDuration $animationTimingFunction;
-}
-
-.modal__close-btn:hover,
-.modal__close-btn:hover .close-icon {
-  color: $accentColor;
-}
-.modal-form {
-  background: $bodyBackgroundColor;
-  height: 581px;
-  padding: 40px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
 }

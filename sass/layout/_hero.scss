@@ -39,9 +39,10 @@
   border-radius: 4px;
   padding: 10px 32px;
   transition: background-color $animationDuration $animationTimingFunction;
-}
-.hero__button:hover,
-.hero__button:focus {
-  color: $thirdTextColor;
-  background-color: $modalBtnBackgroundColor;
+
+  &:hover,
+  &:focus {
+    color: $thirdTextColor;
+    background-color: $modalBtnBackgroundColor;
+  }
 }

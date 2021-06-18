@@ -4,7 +4,6 @@
 }
 .features__list {
   display: flex;
-  /* justify-content: space-between; */
 }
 .features__icon {
   display: flex;
@@ -17,10 +16,12 @@
 }
 .features__item {
   width: calc((100% - 3 * #{$mainMargin}) / 4);
+
+  &:not(:last-child) {
+    margin-right: $mainMargin;
+  }
 }
-.features__item:not(:last-child) {
-  margin-right: $mainMargin;
-}
+
 .features__title {
   font-weight: 700;
   font-size: 14px;

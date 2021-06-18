@@ -3,19 +3,14 @@
   padding-top: 60px;
   padding-bottom: 60px;
 }
-.logo {
-  font-family: $secondaryFont;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-  color: $accentColor;
-}
+
 .address__list {
   margin-top: 20px;
 }
-.address__item:not(:last-child) {
-  margin-bottom: 9px;
+.address__item {
+  &:not(:last-child) {
+    margin-bottom: 9px;
+  }
 }
 .address__link {
   font-style: normal;
@@ -23,6 +18,11 @@
   line-height: 1.71;
   color: $thirdTextColor;
   transition: color $animationDuration $animationTimingFunction;
+
+  &:hover,
+  &:focus {
+    color: $accentColor;
+  }
 }
 .address__mail,
 .address__phone {
@@ -31,26 +31,13 @@
   line-height: 1.71;
   color: $addressPhoneMailColor;
   transition: color $animationDuration $animationTimingFunction;
-}
-.address__link:hover,
-.address__link:focus {
-  color: $accentColor;
+
+  &:hover,
+  &:focus {
+    color: $accentColor;
+  }
 }
 
-.address__mail:hover,
-.address__mail:focus {
-  color: $accentColor;
-}
-.address__phone:hover,
-.address__phone:focus {
-  color: $accentColor;
-}
-.header__logo {
-  color: $mainTextColor;
-}
-.footer__logo {
-  color: $thirdTextColor;
-}
 .footer__content {
   display: flex;
   align-items: baseline;
@@ -76,10 +63,11 @@
   align-items: baseline;
 }
 
-.join__item:not(:last-child) {
-  margin-right: 10px;
+.join__item {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
 }
-
 .join__link {
   align-items: center;
   justify-content: center;
@@ -90,12 +78,13 @@
   border-radius: 50%;
   color: $thirdTextColor;
   transition: background-color $animationDuration $animationTimingFunction;
+
+  &:focus,
+  &:hover {
+    background-color: $accentColor;
+  }
 }
 
-.join__link:focus,
-.join__link:hover {
-  background-color: $accentColor;
-}
 .subscribe__title {
   font-style: normal;
   font-weight: 700;
@@ -132,11 +121,11 @@
   border-radius: 4px;
 
   transition: border $animationDuration $animationTimingFunction;
-}
 
-.subscribe__input:focus,
-.subscribe__input:hover {
-  border: 1px solid rgba(33, 150, 243, 0.3);
+  &:focus,
+  &:hover {
+    border: 1px solid rgba(33, 150, 243, 0.3);
+  }
 }
 
 .subscribe__button {
@@ -157,15 +146,15 @@
   color: $thirdTextColor;
 
   transition: background-color $animationDuration $animationTimingFunction;
+
+  &:focus,
+  &:hover {
+    background-color: $modalBtnBackgroundColor;
+    cursor: pointer;
+  }
 }
 
 .subscribe__icon {
   fill: currentColor;
   margin: 13px 0 13px 10px;
-}
-
-.subscribe__button:focus,
-.subscribe__button:hover {
-  background-color: $modalBtnBackgroundColor;
-  cursor: pointer;
 }

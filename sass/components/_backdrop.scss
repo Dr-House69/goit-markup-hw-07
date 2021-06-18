@@ -8,16 +8,17 @@
   height: 100%;
   transition: opacity $animationDuration $animationTimingFunction,
     visibility $animationDuration $animationTimingFunction;
-}
-.backdrop.is-hidden {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-}
 
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.5);
-}
-.backdrop.is-hidden .modal__close-btn {
-  transform: scale(0.5);
+  &.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  &.is-hidden .modal__close-btn {
+    transform: scale(0.5);
+  }
 }
