@@ -559,7 +559,7 @@ body {
   align-items: center;
 }
 
-.team__contacts:not(:last-child) {
+.team__contacts-item:not(:last-child) {
   margin-right: 10px;
 }
 
